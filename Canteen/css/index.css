@@ -1,0 +1,257 @@
+#corpo,#pagInicial{
+    background-image: url("../img/background1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+#corpo1{
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+}
+#logoRedondo{
+    max-width: 50%;
+    height: auto;
+}
+.nav-link{
+    color:white;
+    font-family: 'Lucida Sans Unicode' sans-serif
+}
+#carousel1{
+    background-color: rgba(136, 135, 135, 0.322);
+}
+.news{
+    
+    padding: 10px;
+    font-family: 'Lucida Sans Unicode' sans-serif
+}
+#news{
+    background-color: rgba(0, 0, 0, 0.329);
+}
+.card{
+    padding: 3rem;
+    margin: auto;
+    display: block
+}
+.btn {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    font: normal 16px/normal Arial, Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(19,96,19,1);
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  .card-img-bottom {
+    color: #fff;
+    height: 20rem;
+    background: url("./img/comida1.jpeg") center no-repeat;
+    background-size: cover;
+  }
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.822);
+    color: white;
+ }
+ #menuDica{
+    vertical-align: text-top;
+    text-align:center;
+    padding: 30px 30px 0 30px;
+    font-family: 'Lato', sans-serif;
+    color: #FFF;   
+  }
+  
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+  }
+  
+  ul {
+    display: block;
+    list-style-type: none;
+    text-align: right;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .menu {
+    margin: 0 10px 0 0;
+    padding-left: 0.25em;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 40px;
+    text-align: right;
+    
+  }
+  
+  .menu-close {
+    font-size: 0em;
+    opacity: 0;
+    text-align: center;
+    font-weight: bold;
+  
+    -webkit-transition: 0.2s;
+            transition: 0.2s;
+  }
+  
+  .menu-close-visible {
+    font-size: 2em;
+    opacity: 1;
+    
+  
+    -webkit-transition: 0.2s 0.4s;
+            transition: 0.2s 0.4s;
+  }
+  
+  .menu-global {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    height: 10px; 
+    width: 100%;
+    background-color: #ffffff;
+  
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: 0.2s;
+            transition: 0.2s;
+            
+  }
+ 
+  .menu-global:hover {
+    left: 10px;
+    -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+  }
+  
+  .menu-top {
+    top: 0;
+  }
+  .menu-middle {
+    top: 18px;
+  }
+  .menu-bottom {
+    top: 36px;
+  }
+  
+  .menu-text{
+    opacity: 0;
+    font-size: 0em;
+    padding: 10px 0;
+    -webkit-transition: 0.1s;
+            transition: 0.1s;
+  }
+  
+  .expand {
+    box-shadow: rgba(0, 0, 0, 0.1) -2.5px 5px 7.5px, rgba(0, 0, 0, 0.1) 2.5px 5px 7.5px;
+    width: 200px;
+    height: 50px;
+  
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  .menu-top-expand {
+    top: 50px;
+    background: #FFF8E1;
+  
+    -webkit-transition: all 0.5s 0.2s, left 0.1s;
+            transition: all 0.5s 0.2s, left 0.1s;
+  }
+  
+  .menu-middle-expand {
+    top: 100px;
+    background: #FFECB3;
+  
+    -webkit-transition: all 0.5s 0.1s, left 0.1s;
+            transition: all 0.5s 0.1s, left 0.1s;
+  }
+  
+  .menu-bottom-expand {
+    top: 150px;
+    height: 100px;
+    background: #FFE082;
+  
+    -webkit-transition: all 0.5s, left 0.1s;
+            transition: all 0.5s, left 0.1s;
+  }
+  
+  .menu-text-expand{
+    color: #000000;
+    opacity: 0.8;
+    padding: 10px;
+    font-size: 1.3em;
+    -webkit-transition: all 0.2s 0.7s, font-size 0.1s;
+            transition: all 0.2s 0.7s, font-size 0.1s;
+  }
+  
+  #footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  #footer-text{
+    padding-left: 60px;
+  }
+  
+  #contMail{
+    max-width: 70%;
+    background-color: rgb(255, 255, 255);
+    padding: 65px;
+    font-family: 'Raleway', sans-serif;
+  }
+  #deleteMess,#respMess{
+    float:right;
+    width:70px;
+    height:15px;
+    font-size:9pt;
+    margin:5px;
+  }
+  #pagDicas > body{
+    color:white
+  }
+  #descDiac{
+    white-space: pre-wrap
+  }
+  textarea {
+    width: 100%;
+    resize: auto;
+    outline: none;
+  }
+  #descDica{
+    /* overflow:hidden; */
+    /* text-overflow:initial; */
+    white-space:pre-line;
+  }
+ 
+  #contDicas{
+    padding: 35px;
+  }
+  ol#listDica {
+    list-style-type: none;
+}

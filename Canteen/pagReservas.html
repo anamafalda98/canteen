@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Canteen - Reservas</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/pagReservas.css">
+    <script src="./js/session.js"></script>
+    <script src="./js/pagReservas.js"></script>
+    <script src="./js/hamburger.js"></script>
+
+</head>
+
+<body id="corpo1">
+
+ 
+    <nav class="navbar navbar-expand-md navbar-fixed-top" style="background-color:rgba(0, 0, 0, 0.562)">
+        <div class="container">
+            <a class="navbar-brand" href="pagInicial.html">
+                <img style="height:30px" responsive SRC="./img/logo2.png">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" id="hamburger" type="button" data-toggle="#navbar2SupportedContent" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars fa-lg" style="color:white" aria-hidden="true"></i>
+            </button>
+            <a class="cross" data-toggle="#navbar2SupportedContent" hidden data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-times fa-2x" style="color:white" aria-hidden="true"></i>
+            </a>
+
+            <div class="collapse navbar-collapse text-center justify-content-center" id="navbar2SupportedContent">
+                <ul class="navbar-nav mr-auto list-unstyled">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagReservas.html">Reserva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagDicas.html"> Dicas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagContacto.html">Contato</a>
+                    </li>
+                    <li id="navAdmin" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> Administração </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="pagReceber.html">Mensagens</a>
+                            <a class="dropdown-item" href="pagDicasBack.html">Publicar Dicas</a>
+                            <a class="dropdown-item" href="pagReservaAdmin2.html">Publicar Votações</a>
+                        </div>
+                    </li>
+                </ul>
+                <li class="nav-item">
+                    <a id="logout" class="btn navbar-btn ml-2 text-white btn-success">Log out</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CORPO DA PAGINA -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md p-5 bg-light">
+                <br>
+                <div class="row">
+                    <div class="col-md">
+
+                    </div>
+                    <div class="col-md" style="text-align:center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger" id="btnCarne">Carne</button>
+                            <button type="button" class="btn btn-info" id="btnPeixe">Peixe</button>
+                            <button type="button" class="btn btn-success" id="btnVeggie">Vegetariano</button>
+                            <button type="button" class="btn btn-warning" id="btnDieta">Dieta</button>
+                        </div>
+                    </div>
+                    <div class="col-md">
+
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <!--CARNE-->
+                <div class="row" id="cardCarne" responsive>
+                    <div class="col-md">
+
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtCarne1" class="transition">Frango Assado</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnCarne1" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtCarne2" class="transition">Lasanha</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnCarne2" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle1 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtCarne3" class="transition">Strogonoff de perú</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnCarne3" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle2 transition"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+
+                    </div>
+
+                </div>
+
+                <!--PEIXE-->
+                <div class="row" hidden id="cardPeixe">
+                    <div class="col-md">
+
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtPeixe1" class="transition">Lulas com molho mostarda</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnPeixe1" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle3 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtPeixe2" class="transition">Bacalhau com natas</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnPeixe2" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle4 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtPeixe3" class="transition">Penne de atum com manjericão</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnPeixe3" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle5 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+
+                    </div>
+
+                </div>
+
+                <!--VEGETARIANO-->
+                <div class="row" id="cardVeggie" hidden>
+                    <div class="col-md">
+
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtVeggie1" class="transition">Estufadinho de lentilhas</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnVeggie1" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle6 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtVeggie2" class="transition">Paelha vegetariana</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnVeggie2" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle7 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtVeggie3" class="transition">Bolonhesa de Soja</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnVeggie3" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle8 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+
+                    </div>
+
+                </div>
+                <!--DIETA-->
+                <div class="row" id="cardDieta" hidden>
+                    <div class="col-md">
+
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtDieta1" class="transition">Atum grelhado</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnDieta1" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle9 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtDieta2" class="transition">Lombinhos de porco grelhados</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnDieta2" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle10 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="cardVote transition">
+                            <h2 id="txtDieta3" class="transition">Bife de frango com arroz integral</h2>
+                            <div class="cta-container transition">
+                                <a href="#" id="btnDieta3" class="cta">Votar</a>
+                            </div>
+                            <div class="cardVote_circle11 transition"></div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="py-5" style="background-image: url(./img/cantina01.jpg);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-md-6" id="reserva">
+                                <div class="card" styl>
+                                    <div id="reservaAluno" class="card-body p-5">
+                                        <h3 class="pb-3">Faça já a sua reserva!</h3>
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Prato</label>
+                                                <div class="dropdown">
+                                                    <select class="form-control" id="slctPrato">
+                                                        <option value="carne">Carne</option>
+                                                        <option value="peixe">Peixe</option>
+                                                        <option value="veggie">Vegetariano</option>
+                                                        <option value="dieta">Dieta</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Nº de Pessoas</label>
+                                                <input type="number" class="form-control" placeholder="2" id="slctNumero">
+                                            </div>
+                                            <input type="button" id="btnReservar" class="btn mt-2  btn-outline-primary" value="Reserve">
+                                        </form>
+                                    </div>
+                                    <div id="reservaAdmin" class="card-body p-5">
+                                        <table class="table">
+                                            <thead>
+                                              <tr class="table-dark">
+                                                <th scope="col">Pratos</th>
+                                                <th scope="col">Reservas</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr class="table-danger">
+                                                <th scope="row">Carne</th>
+                                                <td id="tdCarne"></td>
+                                              </tr>
+                                              <tr class="table-info">
+                                                <th scope="row">Peixe</th>
+                                                <td id="tdPeixe"></td>
+                                              </tr>
+                                              <tr class="table-success">
+                                                <th scope="row">Vegetariano</th>
+                                                <td id="tdVeggie"></td>
+                                              </tr>
+                                              <tr class="table-warning">
+                                                <th scope="row">Dieta</th>
+                                                <td id="tdDieta"></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--FOOTER-->
+    <!--footer-->
+    <div class="footer " style="background-color:rgba(0, 0, 0, 0.562)">
+        <div class="text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4 ">Canteen</h4>
+                        <p class="text-white">Uma plataforma que liga a comunidade Campus 2 com a sua cantina criando espaço de partilha de conteúdo
+                            como receitas, votações e conversas. </p>
+                    </div>
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4 ">Mapa</h4>
+                        <ul class="list-unstyled" style="float:left">
+                            <li>
+                                <a href="pagInicial.html" class="text-white">Início</a>
+                            </li>
+                            <li>
+                                <a href="pagContacto.html" class="text-white">Contato</a>
+                            </li>
+                            <li>
+                                <a href="pagDicas.html" class="text-white">Dicas</a>
+                            </li>
+                            <li>
+                                <a href="pagReserva.html" class="text-white">Reservas</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4">Contato</h4>
+                        <p>
+                            <a href="tel: +351 252 291 700" class="text-white">
+                                <i class="fa d-inline mr-3 text-secondary fa-phone"></i>tel.: +351 252 291 700</a>
+                        </p>
+                        <p>
+                            <a href="mailto:geral@esmad.ipp.pt" class="text-white">
+                                <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>geral@esmad.ipp.pt</a>
+                        </p>
+                        <p>
+                            <a href="https://goo.gl/maps/vV8rnx6Ufqt" class="text-white" target="_blank">
+                                <i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>Rua D. Sancho I, 981
+                                <br> 4480-771 Vila do Conde Portugal</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+                        <p class="text-center text-white">© Copyright 2018 Grupo Maravilha - All rights reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

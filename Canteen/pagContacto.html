@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Canteen</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/session.js"></script>
+    
+</head>
+
+<body id="corpo1">
+    
+    <nav class="navbar navbar-expand-md navbar-fixed-top" style="background-color:rgba(0, 0, 0, 0.562)">
+        <div class="container">
+            <a class="navbar-brand" href="pagInicial.html">
+                <img style="height:30px" responsive SRC="./img/logo2.png">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" id="hamburger" type="button" data-toggle="#navbar2SupportedContent" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars fa-lg" style="color:white" aria-hidden="true"></i>
+            </button>
+            <a class="cross" data-toggle="#navbar2SupportedContent" hidden data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-times fa-2x" style="color:white" aria-hidden="true"></i>
+            </a>
+
+            <div class="collapse navbar-collapse text-center justify-content-center" id="navbar2SupportedContent">
+                <ul class="navbar-nav mr-auto list-unstyled">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagReservas.html">Reserva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagDicas.html"> Dicas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagContacto.html">Contato</a>
+                    </li>
+                    <li id="navAdmin" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> Administração </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="pagReceber.html">Mensagens</a>
+                            <a class="dropdown-item" href="pagDicasBack.html">Publicar Dicas</a>
+                            <a class="dropdown-item" href="pagReservaAdmin2.html">Publicar Votações</a>
+                        </div>
+                    </li>
+                </ul>
+                <li class="nav-item">
+                    <a id="logout" class="btn navbar-btn ml-2 text-white btn-success">Log out</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- Form para receita -->
+    <div class="py-5 text-white opaque-overlay">
+
+        <!-- caso nao consiga meter o api funcionar, guardar info dos inputs no localstorage  e o admin vai conseguir le-lo -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-7">
+                    <h1 class="text-gray-dark">Partilhe a sua receita especial:</h1>
+                    <p class="lead mb-4">Campos obrigatórios - *</p>
+                    <form class="">
+                        <div class="form-group">
+                            <label>Nome: *</label>
+                            <input id="txtNome" type="text" class="form-control" placeholder="Insira o seu nome" required> </div>
+                        <div class="form-group">
+                            <label>Email: *</label>
+                            <input id="txtEmail" type="email" class="form-control" placeholder="Insira o seu email" required> </div>
+                        <div class="form-group">
+                            <label>Título da Receita: *</label>
+                            <input id="txtAssunto" type="text" class="form-control" placeholder="Insira o título da sua receita" required> </div>
+                        <div class="form-group">
+                            <label>Descrição: *</label>
+                            <textarea id="txtDesc" class="form-control" rows="5" placeholder="Insira a sua receita" required></textarea>
+                        </div>
+                        <button type="button" class="btn btn-success" id="btnEmailTo">Enviar</button>
+                        <p id="txtEnviado" style="color:rgb(255, 255, 255); font-size:14pt; text-align:center" for="btnEmailTo"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer " style="background-color:rgba(0, 0, 0, 0.562)">
+        <div class="text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4 ">Canteen</h4>
+                        <p class="text-white">Uma plataforma que liga a comunidade Campus 2 com a sua cantina criando espaço de partilha de conteúdo
+                            como receitas, votações e conversas. </p>
+                    </div>
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4 ">Mapa</h4>
+                        <ul class="list-unstyled" style="float:left">
+                            <li>
+                                <a href="pagInicial.html" class="text-white">Início</a>
+                            </li>
+                            <li>
+                                <a href="pagContacto.html" class="text-white">Contato</a>
+                            </li>
+                            <li>
+                                <a href="pagDicas.html" class="text-white">Dicas</a>
+                            </li>
+                            <li>
+                                <a href="pagReserva.html" class="text-white">Reservas</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4">Contato</h4>
+                        <p>
+                            <a href="tel: +351 252 291 700" class="text-white">
+                                <i class="fa d-inline mr-3 text-secondary fa-phone"></i>tel.: +351 252 291 700</a>
+                        </p>
+                        <p>
+                            <a href="mailto:geral@esmad.ipp.pt" class="text-white">
+                                <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>geral@esmad.ipp.pt</a>
+                        </p>
+                        <p>
+                            <a href="https://goo.gl/maps/vV8rnx6Ufqt" class="text-white" target="_blank">
+                                <i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>Rua D. Sancho I, 981
+                                <br> 4480-771 Vila do Conde Portugal</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+                        <p class="text-center text-white">© Copyright 2018 Grupo Maravilha - All rights reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Canteen - Registo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/login.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <body id="corpo">
+        <div class="py-5">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-3"> </div>
+                    <div class="col-md-6">
+                        <div class="card" style="background-color:rgba(0,0,0,0.4)">
+                                <div class="card-header">
+                                      <center>  <img style="width:70%" responsive SRC="./img/logo2.png"></div></center>
+                            <!-- <img id="logoRedondo" style="position:absolute; bottom:430px;  LEFT:150px;" responsive SRC="./img/logo.png"> -->
+                            <div class="card-body">
+                                
+                                <h2 class="mb-4" style="color:rgb(255, 251, 251)">Registar-se</h2>
+                                <form>
+                                    <div class="form-group">
+                                        <label style="color:rgb(235, 232, 232)">E-mail:</label>
+                                        <input id="txtEmail" type="email" class="form-control" placeholder="Enter email" required> </div>
+                                    <div class="form-group">
+                                        <label style="color:rgb(235, 232, 232)">Palavra-passe:</label>
+                                        <input id="txtPassword1" type="password" minlength="6" maxlength="10" class="form-control" placeholder="Palavra-passe" required> </div>
+                                    <label style="color:rgb(235, 232, 232)">Repetir palavra-passe:</label>
+                                    <input id="txtPassword2" type="password" class="form-control" placeholder="Palavra-passe" required>
+                                    
+                                    <label id="txtErro3" style="color:rgb(235, 140, 140); font-size:7pt" for="txtPassword2"></label>
+                            </div>
+                            <center>
+
+                                <button type="button" class="btn" id="btnSubmit" data-toggle="modal">Registar</button>
+                                <br>
+                                <label id="txtErro1" style="color:rgb(189, 184, 184); font-size:9pt" for="btnSubmit"></label>
+                                <label id="txtErro2" style="color:rgb(189, 184, 184); font-size:9pt" for="btnSubmit"></label>
+                            </center>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+
+        <div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
+            <div class="modal-dialog"  style="background-color:rgba(4, 71, 4, 0.582)" >
+
+                    <div class="modal-body">
+                      <center> <span>Conta registada com succeso.</span><br>
+                       <span>Voltar a Login?</span></center>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Não</button>
+                        <!-- <button type="button" id="btnVoltar" onclick="entrar()" class="btn" >Sim</button> -->
+                        <input type="button" id="btnVoltar" class="btn" value="">
+                        <script>
+                        $("#btnVoltar").on( "click", function () {
+        console.log("botão carregado")
+        window.location.href = "pagLogin.html"
+        
+      })</script>
+                    </div>
+                <!-- </div> -->
+
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

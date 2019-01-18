@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Canteen - Reservas (admin)</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/pagReservas.css">
+    <script src="./js/session.js"></script>
+    <script src="./js/pagReservas.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/news.js"></script>
+</head>
+
+<body id="corpo1">
+
+    <nav class="navbar navbar-expand-md navbar-fixed-top" style="background-color:rgba(0, 0, 0, 0.562)">
+        <div class="container">
+            <a class="navbar-brand" href="pagInicial.html">
+                <img style="height:30px" responsive SRC="./img/logo2.png">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" id="hamburger" type="button" data-toggle="#navbar2SupportedContent" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars fa-lg" style="color:white" aria-hidden="true"></i>
+            </button>
+            <a class="cross" data-toggle="#navbar2SupportedContent" hidden data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-times fa-2x" style="color:white" aria-hidden="true"></i>
+            </a>
+
+            <div class="collapse navbar-collapse text-center justify-content-center" id="navbar2SupportedContent">
+                <ul class="navbar-nav mr-auto list-unstyled">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagReservas.html">Reserva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagDicas.html"> Dicas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagContacto.html">Contato</a>
+                    </li>
+                    <li id="navAdmin" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> Administração </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="pagReceber.html">Mensagens</a>
+                            <a class="dropdown-item" href="pagDicasBack.html">Publicar Dicas</a>
+                            <a class="dropdown-item" href="pagReservaAdmin2.html">Publicar Votações</a>
+                        </div>
+                    </li>
+                </ul>
+                <li class="nav-item">
+                    <a id="logout" class="btn navbar-btn ml-2 text-white btn-success">Log out</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <!-- CORPO DA PAGINA -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-md-9 py-5 bg-light" style="width:900px">
+                <br>
+                <div class="col">
+                    <h5>Carne</h5>
+                    <br>
+                    <div class="row">
+                        <!--Carne1-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtCarne1" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgCarne1" type="file" style="display:none"></input>
+                                    <button id="btnCarne1" type="file" class="btn btn-danger" onclick="document.getElementById('imgCarne1').click();">Search</button>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Carne2-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtCarne2" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgCarne2" type="file" class="file" style="display:none"></input>
+                                    <button id="btnCarne2" type="file" class="btn btn-danger" onclick="document.getElementById('imgCarne2').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Carne3-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtCarne3" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgCarne3" type="file" class="file" style="display:none"></input>
+                                    <button id="btnCarne3" type="file" class="btn btn-danger" onclick="document.getElementById('imgCarne3').click();">Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+
+
+                </div>
+                <div class="col">
+                    <h5>Peixe</h5>
+                    <br>
+                    <div class="row">
+                        <!--Peixe1-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtPeixe1" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgPeixe1" type="file" style="display:none"></input>
+                                    <button id="btnPeixe1" type="file" class="btn btn-info" onclick="document.getElementById('imgPeixe1').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Peixe2-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtPeixe2" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgPeixe2" type="file" class="file" style="display:none"></input>
+                                    <button id="btnPeixe2" type="file" class="btn btn-info" onclick="document.getElementById('imgPeixe2').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Peixe3-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtPeixe3" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgPeixe3" type="file" class="file" style="display:none"></input>
+                                    <button id="btnPeixe3" type="file" class="btn btn-info" onclick="document.getElementById('imgPeixe3').click();">Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+                </div>
+                <hr>
+                <div class="col">
+                    <h5>Vegetariano</h5>
+                    <br>
+                    <div class="row">
+                        <!--Vegetariano1-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtVeggie1" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgVeggie1" type="file" class="file" style="display:none"></input>
+                                    <button id="btnVeggie1" type="file" class="btn btn-success" onclick="document.getElementById('imgVeggie1').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Vegetariano2-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtVeggie2" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgVeggie2" type="file" class="file" style="display:none"></input>
+                                    <button id="btnVeggie2" type="file" class="btn btn-success" onclick="document.getElementById('imgVeggie2').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                        <!--Vegetariano3-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="parto">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtVeggie3" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgVeggie3" type="file" class="file" style="display:none"></input>
+                                    <button id="btnVeggie3" type="file" class="btn btn-success" onclick="document.getElementById('imgVeggie3').click();">Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+                </div>
+                <hr>
+                <div class="col">
+                    <h5>Dieta</h5>
+                    <br>
+                    <div class="row">
+                        <!--Dieta1-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtDieta1" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgDieta1" type="file" class="file" style="display:none"></input>
+                                    <button id="btnDieta1" type="file" class="btn btn-warning" onclick="document.getElementById('imgDieta1').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Dieta2-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtDieta2" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgDieta2" type="file" class="file" style="display:none"></input>
+                                    <button id="btnDieta2" type="file" class="btn btn-warning" onclick="document.getElementById('imgDieta2').click();">Search</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+
+                        </div>
+                        <!--Dieta3-->
+                        <div class="col">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="prato">Prato:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtDieta3" placeholder="Insira o nome do prato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="imagem">Imagem:</label>
+                                <div class="col-sm-10">
+                                    <input id="imgDieta3" type="file" class="file" style="display:none"></input>
+                                    <button id="btnDieta3" type="file" class="btn btn-warning" onclick="document.getElementById('imgDieta3').click();">Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button class="btn btn-warning" id="adicionarOpcoes">Inserir Opções</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="col">
+                    <h5>Notícias</h5>
+                    <div class="form-group">
+                        <label for="txtareadesc" class="fb-textarea-label" style="color:white">Descrição*
+                        </label>
+                        <textarea type="textarea" placeholder="Introduza aqui a descrição da sua notícia..." class="form-control" maxlength="1200"
+                            rows="6" id="txtAreaDesc1" required="required" aria-required="true"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default" access="true" role="1" id="btnUploadNoticia" style="float:right">Publicar</button>
+                        <p id="txtErro"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer " style="background-color:rgba(0, 0, 0, 0.562)">
+        <div class="text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4 ">Canteen</h4>
+                        <p class="text-white">Uma plataforma que liga a comunidade Campus 2 com a sua cantina criando espaço de partilha de conteúdo
+                            como receitas, votações e conversas. </p>
+                    </div>
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4 ">Mapa</h4>
+                        <ul class="list-unstyled" style="float:left">
+                            <li>
+                                <a href="pagInicial.html" class="text-white">Início</a>
+                            </li>
+                            <li>
+                                <a href="pagContacto.html" class="text-white">Contato</a>
+                            </li>
+                            <li>
+                                <a href="pagDicas.html" class="text-white">Dicas</a>
+                            </li>
+                            <li>
+                                <a href="pagReserva.html" class="text-white">Reservas</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="p-4 col-md-4">
+                        <h4 class="mb-4">Contato</h4>
+                        <p>
+                            <a href="tel: +351 252 291 700" class="text-white">
+                                <i class="fa d-inline mr-3 text-secondary fa-phone"></i>tel.: +351 252 291 700</a>
+                        </p>
+                        <p>
+                            <a href="mailto:geral@esmad.ipp.pt" class="text-white">
+                                <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>geral@esmad.ipp.pt</a>
+                        </p>
+                        <p>
+                            <a href="https://goo.gl/maps/vV8rnx6Ufqt" class="text-white" target="_blank">
+                                <i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>Rua D. Sancho I, 981
+                                <br> 4480-771 Vila do Conde Portugal</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+                        <p class="text-center text-white">© Copyright 2018 Grupo Maravilha - All rights reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
